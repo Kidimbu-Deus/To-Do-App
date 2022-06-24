@@ -1,5 +1,11 @@
 :root {
-    --dark: #374151;
+    --background-color: #ffe5e5;
+	--color: #000000;
+	--bg-color: #ffffff;
+	--secondary-color: #ffacac;
+	--primary-color: #53488d;
+	--icon-color: #ffffff;
+	--form-input: #f4f4f4;
 
 
 }
@@ -14,8 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: var(--dark);
-    color: white;
+    background: var(--background-color);
+    color: var(--color);
 }
 
 header {
@@ -30,16 +36,15 @@ header h1 {
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 1px #957dad,
-             1px 2px 1px #957dad,
-             1px 3px 1px #957dad,
-             1px 4px 1px #957dad,
-             1px 5px 1px #957dad,
-             1px 6px 1px #957dad,
-             1px 10px 5px rgba(16, 16, 16, 0.5),
-             1px 15px 10px rgba(16, 16, 16, 0.4),
-             1px 20px 30px rgba(16, 16, 16, 0.3),
-             1px 25px 50px rgba(16, 16, 16, 0.2);
+    color: #d54d7b; 
+    font-family: "Great Vibes",cursive; 
+    font-size: 60px; 
+    line-height: 160px; 
+    font-weight: normal; 
+    margin-bottom: 0px; 
+    margin-top: 40px; 
+    text-align: center; 
+    text-shadow: 0 1px 1px #fff;
 }
 
 #new-task {
@@ -47,37 +52,43 @@ header h1 {
 }
 
 #new-task-submit { 
-    color: blue;
-    font-size: 1rem;
-    font-weight: 900;
-    background-image: linear-gradient(to right, green, blue);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
+    padding: 8px 20px;
+    font-size: 17px;
     cursor: pointer;
-    transition: 0.4s;
-
+      
+    border-radius: 5px;
+      
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+      
+    transition: all 0.3s;
+      
+    &:hover {
+        border-radius: 0px;
+    
+        color: var(--feedback-primary-color);
+        background-color: var(--background-color);
+        background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffacac' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        animation: animatedBackground 5s linear infinite alternate;
+    
+    }
 }
 
-#new-task-submit:hover {
-    opacity: 0.4;
-
-}
-
-#new-task-submit:active {
-    opacity: 0.7;
-}
-
-
-input, button {
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-}
+    @keyframes animatedBackground {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 100% 0;
+        }
+    }
+    
+    
 
 #new-task-input {
     flex: 1 1 0%;
-    background-color:whitesmoke ;
+    background-color: var(--form-input) ;
     padding: 1rem;
     border-radius: 1rem;
     margin-right: 1rem;
@@ -95,6 +106,7 @@ main {
     max-width: 800px;
     width: 100%;
     margin:0 auto;
+    background-color: var(--primary-color);
 }
 
 .task-list {
@@ -105,7 +117,7 @@ main {
 .task-list h2 {
     font-size: 1.5rem;
     font-weight: 300;
-    color: gray;
+    color: var();
     margin-bottom: 1rem;
 
 }
@@ -113,14 +125,14 @@ main {
 #tasks .task {
     display: flex;
     justify-content: space-between;
-    background-color: purple;
+    background-color: var(--secondary-color);
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
 
 #tasks .task .content .text {
-    color: red ;
+    color: var(--color) ;
     font-size: 1.125rem;
     width: 100%;
     display: block;
@@ -128,7 +140,7 @@ main {
 }
 
 #tasks .task .content .text:not(:read-only) {
-    color: pink;
+    color: var(--color);
 }
 
 .task .actions button {
