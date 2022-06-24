@@ -207,6 +207,8 @@ input:checked ~ .bubble::after {
 .task-list {
     padding: 1rem;
     margin-top: 5rem;
+    background-color: #553d67;
+    border-radius: 8px;
 
 }
 
