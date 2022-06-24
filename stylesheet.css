@@ -1,7 +1,7 @@
 :root {
     --background-color: hsl(240, 55%, 41%);
 	--color: white;
-	--business:#3a82ee;
+	--work:#3a82ee;
     --personal:var(--primary-color);
 	--secondary-color: #553d67;
 	--primary-color: #f64c72;
@@ -70,7 +70,7 @@ header h2 {
     background-color: white ;
     padding: 1rem;
     border-radius: 1rem;
-    margin-right: 1rem;
+    width: 100%;;
     color: black;
     border: 0;
     font-size:1.5 ;
@@ -91,18 +91,16 @@ main {
     margin:0 auto;
     border: ;
     border-radius: 2rem;
-    background-color: ;
+    background-color:#553d67 ;
 }
 
 .cat {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap:  1rem;
+    display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    margin-left: rem;
     width: 100%;
+    margin: 1rem;
+    grid-gap:  1rem;
+    margin-top: 1rem;
 
 }
 
@@ -116,7 +114,7 @@ main {
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     cursor: pointer;
-    height: 6rem;
+    height: 7rem;
     width: 22.5rem;
 
 }
@@ -133,7 +131,7 @@ input[type="checkbox"] {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid var(--business);
+    border: 2px solid var(--work);
     box-shadow: var(--work-glow);
     margin-bottom: 0.3rem;
 }
@@ -143,12 +141,36 @@ input[type="checkbox"] {
     box-shadow: var(--personal-glow);
 }
 
+.bubble::after {
+    content: "";
+   display: block;
+   opacity: 0;
+   width: 0px;
+   height: 0;
+   background-color: var(--work);
+   box-shadow: var(--work-glow);
+   border-radius: 50%;
+   transition: 0.2s ease-in-out;
+}
+
+.bubble.personal::after {
+background-color: var(--personal);
+box-shadow: var(--personal-glow);
+}
+
+input:checked ~ .bubble::after {
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+    margin-top: 0.1rem;
+}
+
 #new-task-submit { 
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 8px;
     font-size: 17px;
     cursor: pointer;
-    width: 98.3%;
+    width: 100%;
     display: block;
     color: white;
     background-color: var(--primary-color);
