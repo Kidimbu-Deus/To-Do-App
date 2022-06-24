@@ -26,16 +26,15 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background: whitesmoke;
-    color: ;
+   
 }
 
 header {
     padding: 2rem 1rem;
-    max-width: 800px;
     width: 100%;
     margin: 0 auto;
+    background-color:#3a82ee54;
     
 }
 
@@ -80,6 +79,9 @@ header h2 {
     color: gray ;
 }
 
+h3 {
+font-size: 15px;
+}
 main {
 
     padding: 2rem 1rem;
@@ -224,12 +226,24 @@ input[type="checkbox"] {
     opacity: 0.7;
 }
 
-.task .actions .delete {
+.task .actions .delete { 
+    background-color: crimson;
+    border: none;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 5px;
+    color: #f4f4f4;
 
 }
    
 
 .task .actions .edit {
+    background-color:#3a82ee;
+    border: none;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 5px;
+    color: #f4f4f4;
     
 }
 
