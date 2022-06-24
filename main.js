@@ -6,8 +6,12 @@ let submitBtn = document.getElementById("new-task-submit")
 
     let validated = true;
 
-    let newTaskInput = document.getElementById("new-task-input")
+    let newTaskInput = document.getElementById("new-task-input");
 
+    let list = document.createElement("li");
+    let textNode = document.createTextNode(document.getElementById("new-task-input").value);
+    list.appendChild(textNode);
+    document.getElementById("task-ist").appendChild(list);
     
     
 }
