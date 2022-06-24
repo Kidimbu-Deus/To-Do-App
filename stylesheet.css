@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: whitesmoke;
-    color: ;
+    color:black ;
 }
 
 header {
@@ -53,10 +53,10 @@ header h1 {
     text-shadow: 0 1px 1px #fff;
 }
 
-header h2 {
+ h2 {
     margin-bottom: 1rem;
     font-size: 15px;
-    color: var(--secondary-color);
+    color: black;
 }
 
 #new-task {
@@ -73,7 +73,8 @@ header h2 {
     width: 100%;;
     color: black;
     border: 0;
-    font-size:1.5 ;
+    font-size:1.5;
+    margin-bottom: 2rem;
 }
 
 #new-task-input::placeholder {
@@ -89,9 +90,7 @@ main {
     max-width: 800px;
     width: 100%;
     margin:0 auto;
-    border: ;
     border-radius: 2rem;
-    background-color:#553d67 ;
 }
 
 .cat {
@@ -196,7 +195,6 @@ input:checked ~ .bubble::after {
 .task-list {
     padding: 1rem;
     margin-top: 5rem;
-    text-align: center;
 
 }
 
