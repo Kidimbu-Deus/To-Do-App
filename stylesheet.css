@@ -40,17 +40,29 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 300;
     margin-bottom: 1rem;
-    color: var(--primary-color); 
-    font-size: 60px; 
+    color: var(--primary-color);  
     line-height: 160px; 
     font-weight: normal; 
     margin-bottom: 0px; 
-    margin-top: 40px; 
-    text-align: center; 
-    text-shadow: 0 1px 1px #fff;
+    margin-top: 30px;
+}
+
+header h2 {
+    margin-top: -2rem;
+    color: #f64c72;
+    font-style: italic;
+}
+
+input:not([type="radio"]):not([type="checkbox"]) {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+    font-size:large;
 }
 
  h2 {
