@@ -13,12 +13,41 @@
         <h2>What's up, what do you have planned for today?</h2>
         <form id="new-task">
             <input type="text" id="new-task-input" placeholder="Add Task">
-            <input type="submit" id="new-task-submit" value="Submit Task">
 
         </form>
     </header>
 
     <main>
+
+        <section>
+            <h3>CATEGORY</h3>
+            <div class="cat">
+                
+                <label>
+                    <input type="radio"
+                    name="category"
+                    id="cat1"
+                    value="work">
+                </label>
+                <span class="bubble work"></span>
+                <div>Work</div>
+
+                <label>
+                    <input type="radio"
+                    name="category"
+                    id="cat2"
+                    value="personal">
+                </label>
+                <span class="bubble personal"></span>
+                <div>Personal</div>
+
+            </div>
+                
+            <input type="submit" id="new-task-submit" value="Submit Task">
+
+        </section>
+
+        
         <section class="task-list">
             <h2>Tasks</h2>
 
