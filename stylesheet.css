@@ -180,11 +180,13 @@ input:checked ~ .bubble::after {
 }
 
 #new-task-submit { 
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-left: 15rem;
     padding: 8px;
     font-size: 17px;
     cursor: pointer;
-    width: 100%;
+    width: 40%;
+    align-items: center;
     display: block;
     color: white;
     background-color: var(--primary-color);
