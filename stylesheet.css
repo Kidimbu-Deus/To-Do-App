@@ -233,16 +233,22 @@ input:checked ~ .bubble::after {
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    margin-right: 0.5rem;
+    margin-right: 0.1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-#tasks .task .content .text {
+#tasks .task .content {
+    flex: 1 1 0%;
     color: black ;
     font-size: 1.125rem;
+    padding-left: 1rem;
     width: 100%;
     display: block;
     transition: 0.4s;
+}
+
+#tasks .task .content #text {
+    font-size: 1.2rem;
 }
 
 #tasks .task .content .text:not(:read-only) {
