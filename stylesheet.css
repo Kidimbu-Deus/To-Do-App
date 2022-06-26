@@ -224,7 +224,7 @@ input:checked ~ .bubble::after {
 
 }
 
-#tasks .task {
+#tasks .task-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -236,7 +236,7 @@ input:checked ~ .bubble::after {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-#tasks .task .content {
+#tasks .task-item .content {
     flex: 1 1 0%;
     color: black ;
     font-size: 1.125rem;
@@ -246,15 +246,15 @@ input:checked ~ .bubble::after {
     transition: 0.4s;
 }
 
-#tasks .task .content #text {
+#tasks .task-item .content #text {
     font-size: 1.2rem;
 }
 
-#tasks .task .content .text:not(:read-only) {
+#tasks .task-item .content .text:not(:read-only) {
     color: var(--color);
 }
 
-.task .actions button {
+.task-item .actions button {
     cursor:pointer;
     margin:  0 0.5rem;
     font-size: 1.125rem;
@@ -263,16 +263,16 @@ input:checked ~ .bubble::after {
     transition: 0.4s;
 }
 
-.task .actions button:hover {
+.task-item .actions button:hover {
     opacity: 0.4;
 
 }
 
-.task .actions button:active {
+.task-item .actions button:active {
     opacity: 0.7;
 }
 
-.task .actions .delete { 
+.task-item .actions .delete { 
     background-color: crimson;
     border: none;
     height: 2rem;
@@ -283,7 +283,7 @@ input:checked ~ .bubble::after {
 }
    
 
-.task .actions .edit {
+.task-item .actions .edit {
     background-color:#3a82ee;
     border: none;
     height: 2rem;
