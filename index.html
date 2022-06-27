@@ -26,7 +26,23 @@
             <form id="new-task-form">
                     <input type="text" name="content" id="new-task-input" placeholder="eg. take out the trash">
                 
+                    <div class="">
+                        <label for="taskDescription">Task Description:</label>
+                        <textarea name="taskDescription" id="taskDescription" placeholder="Description Here <</Optional>>" rows="5"></textarea>
+                    </div>
 
+                      <br><br>
+
+                    <div class="">
+                        <label for="dueDate">Set Task Due Date</label>
+                        <input type="date"  id="dueDate">
+                        <p id="dueDateInstructions" class="require">Required. Must select date</p>
+                    </div>
+                    <div class="">
+                        <label for="dueTime">Set Task Due Time</label>
+                        <input type="time"  id="dueTime">
+                        <p class="required" id="dueTimeInstructions">Required. Must select time</p>
+                    </div>
                 
 
                 <h3>Pick category</h3>
