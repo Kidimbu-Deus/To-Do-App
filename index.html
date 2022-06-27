@@ -20,16 +20,17 @@
 
     <main>
 
-        <section>
+        <section class="create-task">
             <h2>What's up, what do you have planned for today?</h2>
 
-            <form id="new-task">
+            <form id="new-task-form">
                 <input type="text" name="task-content" id="new-task-input" placeholder="eg. take out the trash">
-    
             </form>
 
+            
+
             <h3>Pick category</h3>
-            <div class="cat">
+            <div class="category">
                 
                 <label>
                     <input type="radio"
@@ -49,7 +50,7 @@
                     <div>Personal</div>
 
                 </label>
-                
+            
             </div>
                 
             <input type="submit" id="new-task-submit" value="Submit">
@@ -59,16 +60,16 @@
         
         <section class="task-list">
             <h2>TO-DO LIST</h2>
-            <div class="list" id="tasks">
+            <div class="list">
 
-                <!--<div class="task-item">
+                <div class="task-item">
 
-                    <label class="label">
+                    <label>
                         <input type="checkbox">
                         <span class="bubble personal"></span>
                     </label>
 
-                    <div class="content">
+                    <div class="task-content">
                         <input type="text" id="text" value="Make Food" readonly>
                     </div>
                 
@@ -86,7 +87,7 @@
                         <span class="bubble work"></span>
                     </label>
 
-                    <div class="content">
+                    <div class="task-content">
                         <input type="text" id="text" value="Make website" readonly>
                     </div>
                 

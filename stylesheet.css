@@ -72,7 +72,7 @@ input:not([type="radio"]):not([type="checkbox"]) {
     color: black;
 }
 
-#new-task {
+#new-task-form {
     display: flex;
 }
 
@@ -107,7 +107,7 @@ main {
     border-radius: 2rem;
 }
 
-.cat {
+.category {
     display: flex;
     align-items: center;
     width: 100%;
@@ -118,7 +118,7 @@ main {
 
 }
 
-.cat label {
+.category label {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,7 +224,7 @@ input:checked ~ .bubble::after {
 
 }
 
-#tasks .task-item {
+.task-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -236,7 +236,7 @@ input:checked ~ .bubble::after {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-#tasks .task-item .content {
+.task-item .task-content {
     flex: 1 1 0%;
     color: black ;
     font-size: 1.125rem;
@@ -246,11 +246,11 @@ input:checked ~ .bubble::after {
     transition: 0.4s;
 }
 
-#tasks .task-item .content #text {
+.task-item .task-content #text {
     font-size: 1.2rem;
 }
 
-#tasks .task-item .content .text:not(:read-only) {
+.task-item .task-content .text:not(:read-only) {
     color: var(--color);
 }
 
@@ -291,5 +291,10 @@ input:checked ~ .bubble::after {
     border-radius: 5px;
     color: #f4f4f4;
     
+}
+
+.task-item.done .task-content input {
+    text-decoration: line-through;
+    color: gray;
 }
 
