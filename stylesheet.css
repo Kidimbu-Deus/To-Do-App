@@ -72,10 +72,6 @@ input:not([type="radio"]):not([type="checkbox"]) {
     color: black;
 }
 
-#new-task-form {
-    display: flex;
-}
-
     
 #new-task-input {
     align-items: center;
@@ -105,6 +101,10 @@ main {
     width: 100%;
     margin:0 auto;
     border-radius: 2rem;
+}
+
+.create-task {
+
 }
 
 .category {

@@ -24,36 +24,38 @@
             <h2>What's up, what do you have planned for today?</h2>
 
             <form id="new-task-form">
-                <input type="text" name="task-content" id="new-task-input" placeholder="eg. take out the trash">
+                    <input type="text" name="content" id="new-task-input" placeholder="eg. take out the trash">
+                
+
+                
+
+                <h3>Pick category</h3>
+                <div class="category">
+                    
+                    <label>
+                        <input type="radio"
+                        name="category"
+                        id="cat1"
+                        value="work">
+                        <span class="bubble work"></span>
+                        <div>Work</div>
+                    </label>                
+
+                    <label>
+                        <input type="radio"
+                        name="category"
+                        id="cat2"
+                        value="personal">
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+
+                    </label>
+                
+                </div>
+                <input type="submit" id="new-task-submit" value="Submit">
+
             </form>
-
-            
-
-            <h3>Pick category</h3>
-            <div class="category">
                 
-                <label>
-                    <input type="radio"
-                    name="category"
-                    id="cat1"
-                    value="work">
-                    <span class="bubble work"></span>
-                    <div>Work</div>
-                </label>                
-
-                <label>
-                    <input type="radio"
-                    name="category"
-                    id="cat2"
-                    value="personal">
-                    <span class="bubble personal"></span>
-                    <div>Personal</div>
-
-                </label>
-            
-            </div>
-                
-            <input type="submit" id="new-task-submit" value="Submit">
 
         </section>
 
