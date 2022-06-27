@@ -94,14 +94,54 @@ input:not([type="radio"]):not([type="checkbox"]) {
 h3 {
 font-size: 15px;
 }
+
+input[type="date"],
+input[type="time"],
+textarea {
+	border: red;
+	border-radius: solid;
+	padding: 10px;
+	width: 100%; 
+	color:#0d0f1185;
+	margin-bottom: 30px;
+    
+}
+
+
+p {
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+}
+
+#taskDescription {
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: white ;
+    display:flex;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+
+  
+}
+
 main {
 
-    padding: 2rem 1rem;
+    padding: 2rem ;
     max-width: 800px;
     width: 100%;
     margin:0 auto;
     border-radius: 2rem;
-    background-color:beige;
+    
+}
+
+form {
+    background-color:#9b8686;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 
@@ -109,7 +149,6 @@ main {
     display: flex;
     align-items: center;
     width: 100%;
-    margin: 1rem;
     grid-gap:  1rem;
     margin-top: 1rem;
     
@@ -178,7 +217,7 @@ input:checked ~ .bubble::after {
 
 #new-task-submit { 
     margin-top: 3rem;
-    margin-left: 15rem;
+    margin-left: 11rem;
     padding: 8px;
     font-size: 17px;
     cursor: pointer;
@@ -295,5 +334,16 @@ input:checked ~ .bubble::after {
 .task-item.done .task-content input {
     text-decoration: line-through;
     color: gray;
+}
+
+.require {
+	visibility: hidden;
+	margin: 0.5rem;
+	color: red;
+}
+
+.require-show {
+	visibility:visible;
+	color: red;
 }
 
