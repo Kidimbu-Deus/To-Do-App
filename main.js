@@ -28,20 +28,22 @@ nameInput.addEventListener('change', e => {
 
     e.target.reset();
 
-    DisplayTaskList();
+    DisplayTasks();
 
     })
 
-    DisplayTaskList();
+    DisplayTasks();
 
 })
 
-function DisplayTaskList() {
-    const taskItems = document.querySelector('#task-list');
+function DisplayTasks() {
+    const taskList = document.querySelector('.task-list');
 
-    taskList.forEach(task => {
+    taskList.innerHTML = '';
+
+    tasks.forEach(task => {
         const taskItem = document.createElement('div');
-        taskItem.classList.add('task-item');
+        taskItem.classList.add('task-item')
 
         const label = document.createElement('label');
         const input = document.createElement('input');
@@ -55,13 +57,13 @@ function DisplayTaskList() {
         input.checked = task.done;
         span.classList.add('bubble');
 
-        if (task.category == 'personal'){
+        if (task.category == 'personal') {
             span.classList.add('personal');
         } else {
             span.classList.add('work');
         }
 
-        content.classList.add('content');
+        content.classList.add('task-content');
         actions.classList.add('actions');
         edit.classList.add('edit');
         deleteButton.classList.add('delete');
@@ -78,7 +80,7 @@ function DisplayTaskList() {
         taskItem.appendChild(content);
         taskItem.appendChild(actions);
 
-        taskItems.appendChild(taskItem);
+        taskList.appendChild(taskItem);
 
         if (task.done) {
             taskItem.classList.add('done');
@@ -86,7 +88,7 @@ function DisplayTaskList() {
 
         input.addEventListener('click', e => {
             task.done = e.target.checked;
-            localStorage.setItem('taskList', JSON.stringify(taskList))
+            localStorage.setItem('tasks', JSON.stringify(tasks));
 
             if (task.done){
                 taskItem.classList.add('done');
@@ -94,7 +96,7 @@ function DisplayTaskList() {
                 taskItem.classList.remove('done');
             }
 
-            DisplayTaskList();
+            DisplayTasks();
         })
 
         edit.addEventListener('click', e => {
@@ -104,17 +106,17 @@ function DisplayTaskList() {
             input.addEventListener('blur', e =>{
                 input.setAttribute('readonly', true);
                 task.content = e.target.value;
-                localStorage.setItem('taskList', JSON.stringify(taskList))
-                DisplayTaskList()
+                localStorage.setItem('tasks', JSON.stringify(tasks))
+                DisplayTasks()
 
             })
 
         })
 
-        deleteButton.addEventListener('click', e =>{
-            taskList = taskList.filter(t => t != task);
-            localStorage.setItem('taskList', JSON.stringify(taskList))
-            DisplayTaskList();
+        deleteButton.addEventListener('click', e => {
+            tasks = tasks.filter(t => t != task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            DisplayTasks();
         })
     })
 

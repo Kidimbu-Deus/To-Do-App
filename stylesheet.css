@@ -101,11 +101,9 @@ main {
     width: 100%;
     margin:0 auto;
     border-radius: 2rem;
+    background-color:beige;
 }
 
-.create-task {
-
-}
 
 .category {
     display: flex;
@@ -216,11 +214,12 @@ input:checked ~ .bubble::after {
 
 }
 
-.task-list h2 {
+#task-list-h2 {
     font-size: 1.5rem;
     font-weight: 300;
     color: var();
-    margin-bottom: 1rem;
+    margin-bottom: -9rem;
+    margin-top: 10rem;
 
 }
 
