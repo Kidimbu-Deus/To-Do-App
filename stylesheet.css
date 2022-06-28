@@ -209,19 +209,17 @@ box-shadow: var(--personal-glow);
 }
 
 input:checked ~ .bubble::after {
-    width: 14px;
-    height: 14px;
-    opacity: 1;
-    margin-top: 0.1rem;
+    width: 19px;
+    height: 17px;
+    opacity: 1;   
 }
 
 #new-task-submit { 
     margin-top: 3rem;
-    margin-left: 11rem;
     padding: 8px;
     font-size: 17px;
     cursor: pointer;
-    width: 40%;
+    width: 100%;
     align-items: center;
     display: block;
     color: white;
