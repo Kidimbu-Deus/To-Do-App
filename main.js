@@ -18,7 +18,6 @@ nameInput.addEventListener('change', e => {
     const task = {
         content: e.target.elements.content.value,
         category: e.target.elements.category.value,
-        date: e.target.elements.date.value,
         done: false,
         description: e.target.elements.description.value,
         createdAt: new Date().getTime(),
@@ -54,7 +53,6 @@ function DisplayTasks() {
         const actions = document.createElement('div');
         const edit = document.createElement('button');
         const deleteButton = document.createElement('button');
-        const date = document.createElement('div')
         const description = document.createElement('div')
 
 
@@ -68,17 +66,16 @@ function DisplayTasks() {
             span.classList.add('work');
         }
 
+
         content.classList.add('task-content');
         actions.classList.add('actions');
         edit.classList.add('edit');
         deleteButton.classList.add('delete');
-        date.classList.add('date')
-        description.classList.add('description')
+        description.classList.add('view-task-description')
         
         content.innerHTML = `<input type="text" value="${task.content}" readonly>`;
         edit.innerHTML = 'edit';
         deleteButton.innerHTML = 'delete';
-        date.innerHTML = `${task.date}`;
         description.innerHTML = `${task.description}`;
 
     
@@ -87,7 +84,6 @@ function DisplayTasks() {
         label.appendChild(span);
         actions.appendChild(edit);
         actions.appendChild(deleteButton);
-        taskItem.appendChild(date)
         taskItem.appendChild(description)
         taskItem.appendChild(label);
         taskItem.appendChild(content);
@@ -134,3 +130,5 @@ function DisplayTasks() {
     })
 
 }
+
+
